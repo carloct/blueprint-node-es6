@@ -1,5 +1,5 @@
 {
-  "name": "blueprint-node-es6",
+  "name": "blueprint-node-es6-mysql",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
