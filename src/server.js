@@ -9,7 +9,7 @@ import config from './config';
 
 dotenv.config();
 
-const knex = Knex(config.db.knex.development);
+const knex = Knex(config.db.knex[process.env.NODE_ENV]);
 Model.knex(knex);
 
 const app = express();
@@ -19,6 +19,10 @@ app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/static', express.static('dist', { maxAge: '1y' }));
+
+app.get('*', (req, res) => {
+  res.sendStatus(200);
+});
 
 const port = process.env.EXPRESS_PORT || '9001';
 
