@@ -1,8 +1,7 @@
-### ES6 Node + MySQL blueprint
+### Isomorphic app blueprint
 
 #### Content
 
-- ESLint
-- Babel
-- Express
-- Objection ORM
+- Node + express backend
+- React / Redux / SSR (wip)
+- Postgres
